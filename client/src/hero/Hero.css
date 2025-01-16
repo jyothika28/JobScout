@@ -1,0 +1,18 @@
+.hero {
+  background-color: #fbeaeb;
+  padding: 50px 0;
+  text-align: center;
+}
+.oneline {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 70px;
+}
+.twoline {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+}
+
