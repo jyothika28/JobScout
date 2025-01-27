@@ -1,7 +1,6 @@
 import { initializeApp } from "firebase/app";
 import { getAuth, signInWithRedirect, GoogleAuthProvider,OAuthProvider } from "firebase/auth";
 
-
 const firebaseConfig = {
     apiKey: "AIzaSyC56k_eax9nm7FPKXTFGYDa2lAmvQ-2ORU",
     authDomain: "jobscout-721c5.firebaseapp.com",
