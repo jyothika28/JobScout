@@ -1,26 +1,39 @@
 import React from 'react';
 import './Hero.css';
 import '../App.css';
-import { signInWithRedirect } from 'firebase/auth';
-import { auth, googleProvider } from '../firebase';
+import {signInWithPopup } from 'firebase/auth';
+import { auth,googleProvider,microsoftProvider } from '../config/firebase';
 
 
 function Hero() {
-   
-  const handleGoogleSignIn = () => {
-    signInWithRedirect(auth, googleProvider)
-      .then(() => {
-        // Handle successful sign-in
-        console.log('Sign-in successful');
-      })
-      .catch((error) => {
-        // Handle sign-in errors
-        console.error('Sign-in error:', error);
+
+ 
+  const handleGoogleSignIn = async() => {
+    try {
+      await signInWithPopup(auth, googleProvider).then((result) => {
+        console.log("google")
+        console.log("Logged in user name:", result.user.displayName); // Log the user's name  
       });
+    } catch (error) {
+      console.log("redirect error");
+      console.log(error);
+    }
+  };
+  const handleMicrosoftSignIn = async() => {
+    try {
+      await signInWithPopup(auth, microsoftProvider).then((result) => {
+        console.log("microsoft")
+        console.log("Logged in user name:", result.user.displayName); // Log the user's name  
+      });
+    } catch (error) {
+      console.log("redirect error");
+      console.log(error);
+    }
   };
 
   return (
     <div className="hero">
+    
       <p className='oneline alegreya-700'>Job hunting, reimagined.</p>
       
       <p className='twoline alegreya-400'>
@@ -43,7 +56,9 @@ function Hero() {
       onClick={handleGoogleSignIn}
 
      >Log in with Google</button><br/>
-    <button type="button" class="btn btn-primary">Log in with Outlook</button>
+    <button type="button" class="btn btn-primary"
+      onClick={handleMicrosoftSignIn}
+    >Log in with Outlook</button>
      
       </div>
       <div class="modal-footer">
