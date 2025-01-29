@@ -7,7 +7,7 @@ function Header() {
     <header className="header">
       <nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
-  <a className="navbar-brand" href="/home">
+  <a className="navbar-brand" href="/">
   JobScout
 </a>
 <span class="navbar-text">

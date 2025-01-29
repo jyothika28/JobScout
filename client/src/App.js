@@ -1,13 +1,22 @@
 import './App.css';
-import Header from './header/Header.js';
 import React from 'react';
-import Hero from './hero/Hero.js';
+import Dashboard from './components/dashboard/Dashboard';
+import { BrowserRouter as Router,Routes,Route } from 'react-router-dom';
+import JobScout from './components/Jobscout';
+import Profile from './components/profile/Profile';
+import Header from './components/header/Header';
+
 function App() {
-  // const navigate = useNavigate();
   return (
     <>
-      <Header />
-      <Hero />
+      <Router>
+        <Header />
+        <Routes>
+          <Route path="/" Component={JobScout} />
+          <Route path="/dashboard" Component={Dashboard} />
+          <Route path="/profile" Component={Profile} />
+      </Routes>
+    </Router>
     </>
   );
 }

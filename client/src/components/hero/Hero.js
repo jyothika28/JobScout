@@ -1,8 +1,8 @@
 import React from "react";
 import "./Hero.css";
-import "../App.css";
+import "../../App.css";
 import { signInWithPopup } from "firebase/auth";
-import { auth, googleProvider, microsoftProvider } from "../config/firebase";
+import { auth, googleProvider, microsoftProvider } from "../../config/firebase";
 
 function Hero() {
   const handleGoogleSignIn = async () => {
@@ -12,6 +12,7 @@ function Hero() {
         console.log("Logged in user name:", result.user.displayName); // Log the user's name
       });
     } catch (error) {
+      alert("Authentication failed, Please try again!");
       console.log("redirect error");
       console.log(error);
     }
@@ -23,6 +24,7 @@ function Hero() {
         console.log("Logged in user name:", result.user.displayName); // Log the user's name
       });
     } catch (error) {
+      alert("Authentication failed, Please try again!");
       console.log("redirect error");
       console.log(error);
     }
@@ -31,7 +33,6 @@ function Hero() {
   return (
     <div className="hero">
       <p className="oneline alegreya-700">Job hunting, reimagined.</p>
-
       <p className="twoline alegreya-400">
         Stay on top of your applications, streamline the process, and track your
         progress effortlessly <br />
