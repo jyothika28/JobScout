@@ -6,23 +6,17 @@ With integrations for Gmail and Outlook, JobScout automatically fetches job-rela
 ### Features
 
 Application Tracking: Categorize and view applications by status: Applied, In Progress, Rejected.
-Email Integration: Connect Gmail and Outlook to fetch and parse job-related emails automatically.
+Email Integration: Connect Gmail and Outlook to automatically fetch and parse job-related emails.
 Real-Time Updates: Get a clear summary of your job search progress in one place.
-Analytics & Trends (Coming Soon): Gain insights into your application success rates and trends.
+
 
 ### Tech Stack
 
 Frontend: React
-Backend: FastAPI (Python)
-Database: DynamoDB
-Authentication: Firebase
-Integrations: Gmail API, Microsoft Graph API
+Backend: FastAPI (Python)<br/>
+Visualization tools: Charts.js<br/>
+Database: DynamoDB<br/>
+Authentication: Firebase<br/>
+Integrations: Gmail API, Microsoft Graph API</br>
 
-### Getting Started
 
-Prerequisites
-
-Node.js and npm installed (for the front end).
-Python 3.9+ installed (for the backend).
-AWS account for DynamoDB.
-Firebase project for authentication.
